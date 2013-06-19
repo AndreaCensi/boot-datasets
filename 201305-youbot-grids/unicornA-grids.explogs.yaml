@@ -107,7 +107,7 @@
         events:
           disturbances: []
         notes: | 
-          Manually driven in a grid
+          Manually driven in a grid (closed environment)
           Note that at the end  I rotate a bit by mistake
                  23 (0.0, 0.1, 0.0)
            1 (0.1, 0.0, 0.0)

@@ -122,6 +122,8 @@
   - rosstream2boot.ExpLogFromYaml
   - files:
       "file:bag": "unicornA_teleop_nmap_corner3_2013-06-05-21-19-26.bag"
+      "file:outside": "unicornA_teleop_nmap_corner3_2013-06-05-21-19-26.casio.mov"
+      "file:outside2": "unicornA_teleop_nmap_corner3_2013-06-05-21-19-26.mino.mp4"
     annotations:
       robot: *unicornA_base1
       motion:
@@ -133,6 +135,9 @@
         disturbances: []
       notes: | 
         we have 2 video files: Canon + Flip Mino
+        # guessing I would guess 21:19 +17min   = 21:36
+        # original movie: 2013-06-05 22_29_08 (id)
+        #                            +1h10 min
 
 
 - id: unicornA_teleop_nmap_2013-06-02-18-25-23

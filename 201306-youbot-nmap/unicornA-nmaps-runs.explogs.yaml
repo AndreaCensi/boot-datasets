@@ -6,7 +6,19 @@
   - rosstream2boot.ExpLogFromYaml
   - files:
       "file:bag": "unicornA_teleop_nmap_corner3_run_2013-06-05-22-02-03.bag"
+      "file:outside": "unicornA_teleop_nmap_corner3_run_2013-06-05-22-02-03.casio.mov"
+      "file:outside2": "unicornA_teleop_nmap_corner3_run_2013-06-05-22-02-03.mino.mp4"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        robot: unicornA_tr1_cf_strip
+        agent: exp14_bdser_s3
+        launch: exp30c_tr1_cf_strip_navigation_map1.launch
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.04
       robot: &unicornA_base1
         name: unicorn
         shape: unicornA
@@ -22,7 +34,8 @@
         we have 2 video files: Canon + Flip Mino
         autonomous run of unicornA_teleop_nmap_corner3_2013
         $ roslaunch boot_servo_demo exp30c_tr1_cf_strip_navigation_map1.launch
-
+        guess +1h10m = 23:12 => 2013-06-05 23_11_37 (id).mov
+        VID00047.MP4 10:36 (+34)
 
 - id: unicornA_teleop_nmap_corner3_run_2013-06-05-22-35-51
   desc: "not sure why this one diverged after a while"
@@ -33,6 +46,16 @@
       "file:outside": "unicornA_teleop_nmap_corner3_run_2013-06-05-22-35-51.casio.mov"
       "file:outside2": "unicornA_teleop_nmap_corner3_run_2013-06-05-22-35-51.mino.mp4"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        launch: exp30-tw1_hlhr-map3.launch
+        robot: unicornA_tw1_hlhr_sane_s4
+        agent: bdser_er4_i2_srl
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.04
       robot: *unicornA_base1
       motion:
         agent: andrea  
@@ -51,6 +74,16 @@
       "file:outside": "unicornA_teleop_nmap_corner3_run_2013-06-05-22-43-23.casio.mov"
       "file:outside2": "unicornA_teleop_nmap_corner3_run_2013-06-05-22-43-23.mino.mp4"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        launch: exp30-tw1_hlhr-map3.launch
+        robot: unicornA_tw1_hlhr_sane_s4
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.04
+        agent: bdser_er4_i2_srl
       robot: *unicornA_base1
       motion:
         agent: andrea  
@@ -72,6 +105,16 @@
       "file:outside": "unicornA_teleop_nmap_corner3_run_2013-06-05-23-20-14.casio.mov"
       "file:outside2": "unicornA_teleop_nmap_corner3_run_2013-06-05-23-20-14.mino.mp4"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        robot: unicornA_tw1_hl_sane_s4 
+        agent: bdser_er4_i2_srl
+        launch:  exp30-tw1_hl-map3.launch
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.04
       robot: *unicornA_base1
       motion:
         agent: andrea  
@@ -79,7 +122,7 @@
       events:
         disturbances: []
       notes: | 
-        ???
+        ??? -> decided hl
 
 - id: unicornA_teleop_nmap_corner3_run_2013-06-05-23-15-48
   desc: "autonomous run of trajectory with hl in unicornA_teleop_nmap_corner3_2013"
@@ -90,6 +133,17 @@
       "file:outside": "unicornA_teleop_nmap_corner3_run_2013-06-05-23-15-48.casio.mov"
       "file:outside2": "unicornA_teleop_nmap_corner3_run_2013-06-05-23-15-48.mino.mp4"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        robot: unicornA_tw1_hl_sane_s4 
+        agent: bdser_er4_i2_srl
+        launch:  exp30-tw1_hl-map3.launch
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.04
+
       robot: *unicornA_base1
       motion:
         agent: andrea  
@@ -106,6 +160,17 @@
   - files:
       "file:bag": "unicornA_teleop_nmap_corner3_run_2013-06-05-23-42-11.bag"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        robot: unicornA_tw1_hl_sane_s4 
+        agent: bdser_er4_i2_srl
+        launch:  exp30-tw1_hl-map3.launch
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.04
+
       robot: *unicornA_base1
       motion:
         agent: andrea  
@@ -117,7 +182,7 @@
         autonomous run of unicornA_teleop_nmap_corner3_2013
         roslaunch boot_servo_demo exp30-tw1_hl-map3.launch
         Two loops, ok.
-
+        video: +1h10m = 06-06 00:52 => 2013-06-06 00_51_16 (id)
 
 
 - id: unicornA_teleop_nmap_corner3_tw1_fs1_2013-06-08-18-38-46
@@ -129,6 +194,16 @@
       "file:outside": "unicornA_teleop_nmap_corner3_tw1_fs1_2013-06-08-18-38-46.casio.mov"
       "file:outside2": "unicornA_teleop_nmap_corner3_tw1_fs1_2013-06-08-18-38-46.mino.mp4"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        robot: unicornA_tw1_fs1
+        agent: bdse_e1_ss
+        launch: exp33-tw1_fs1-map3.launch
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.06
       robot: *unicornA_base1
       motion:
         agent: navigation
@@ -136,7 +211,7 @@
       events:
         disturbances: []
       notes: | 
-        shows the effect of gain (lateral translation not good)
+        ....
 
 - id: unicornA_teleop_nmap_corner3_tw1_fs1g2_2013-06-08-19-10-00
   desc: "same, double gain"
@@ -147,6 +222,18 @@
       "file:outside": "unicornA_teleop_nmap_corner3_tw1_fs1g2_2013-06-08-19-10-00.casio.mov"
       "file:outside2": "unicornA_teleop_nmap_corner3_tw1_fs1g2_2013-06-08-19-10-00.mino.mp4"
     annotations:
+      tags: [navigation]
+      navigation:
+        map: unicornA_teleop_nmap_corner3_2013-06-05-21-19-26
+        robot: unicornA_tw1_fs1
+        agent: bdse_e1_ss-g2
+        launch: exp33-tw1_fs1-map3.launch
+        params:
+          ratio_threshold: 0.95
+          d_next_threshold: 0.03
+          d_next_threshold_alone: 0.06
+
+
       robot: *unicornA_base1
       motion:
         agent: navigation

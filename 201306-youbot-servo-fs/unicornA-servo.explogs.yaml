@@ -8,11 +8,17 @@
       "file:outside": "unicornA_servo_fs1_2013-06-08-15-59-53.casio.mov"
       "file:outside2": "unicornA_servo_fs1_2013-06-08-15-59-53.mino.mp4"
     annotations:
-      tags: [servo, fieldsampler, twist]
+      tags: [servo, fieldsampler, tw1]
       robot: &unicornA_base1
         name: unicorn
         shape: unicornA
         profile: base1
+      servo:
+        goal: 60.0 # when the goal was given
+        robot: unicornA_tw1_fs1
+        agent: bdse_e1_ss
+        launch: exp33-tw1_fs1-servo-bdse.launch
+        error_threshold: 0.02 # guessed from comment
       motion:
         agent: servo  
       environment: &lab_boxes4
@@ -22,7 +28,7 @@
         disturbances: []
       notes: | 
         we have two video streams
-        launch: exp33-tw1_fs1-servo-bdse.launch
+        
         works well, except that I chose the threshold for stopping too small
 
 - id: unicornA_servo_tw1_fs1_2013-06-08-18-03-46
@@ -34,8 +40,14 @@
       "file:outside": "unicornA_servo_tw1_fs1_2013-06-08-18-03-46.casio.mov"
       "file:outside2": "unicornA_servo_tw1_fs1_2013-06-08-18-03-46.mino.mp4"
     annotations:
-      tags: [servo, fieldsampler, twist]
+      tags: [servo, fieldsampler, tw1]
       robot: *unicornA_base1
+      servo:
+        goal: 60.0 # when the goal was given
+        robot: unicornA_tw1_fs1
+        agent: bdse_e1_ss
+        launch: exp33-tw1_fs1-servo-bdse.launch
+        error_threshold: 0.04
       motion:
         agent: servo  
       environment: *lab_boxes4
@@ -54,8 +66,14 @@
       "file:outside": "unicornA_servo_tr1_fs1_2013-06-08-16-50-23.casio.mov"
       "file:outside2": "unicornA_servo_tr1_fs1_2013-06-08-16-50-23.mino.mp4"
     annotations:
-      tags: [servo, fieldsampler, twist]
+      tags: [servo, fieldsampler, tr1]
       robot: *unicornA_base1
+      servo:
+        goal: 60.0 # when the goal was given
+        robot: unicornA_tr1_fs1
+        agent: bdse_e1_ss
+        launch: exp33-tr1_fs1-servo-bdse.launch
+        error_threshold: 0.04
       motion:
         agent: servo  
       environment: *lab_boxes4
@@ -74,8 +92,14 @@
       "file:outside": "unicornA_servo_un1_fs1_2013-06-08-17-16-38.casio.mov"
       "file:outside2": "unicornA_servo_un1_fs1_2013-06-08-17-16-38.mino.mp4"
     annotations:
-      tags: [servo, fieldsampler, twist]
+      tags: [servo, fieldsampler, un1]
       robot: *unicornA_base1
+      servo:
+        goal: 60.0 # when the goal was given
+        robot: unicornA_tr1_fs1
+        agent: bdse_e1_ss
+        launch: exp33-un1_fs1-servo-bdse.launch
+        error_threshold: 0.03
       motion:
         agent: servo  
       environment: *lab_boxes4 
